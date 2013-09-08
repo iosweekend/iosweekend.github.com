@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Hands-on iPhone developer training | Xcode | Objective-C | Cocoa | iOS Weekend</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn practical development skills building a real-world iOS application this weekend.  Learn Xcode, Objective-C and Cocoa. Bay Area classes starting soon.">
+        <meta name="author" content="Bennett Smith">
+
+        <!-- Twitter Card Meta Data -->
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@iosweekend" />
+        <meta name="twitter:creator" content="@bennettsmith" />
+        <meta name="twitter:url" content="http://www.iosweekend.com" />
+        <meta name="twitter:title" content="Hands-on iPhone and iPad developer training | Xcode | Objective-C | Cocoa" />
+        <meta name="twitter:description" content="Learn practical development skills building a real-world iOS application this weekend.  Learn Xcode, Objective-C and Cocoa. Bay Area classes starting soon." />
+        <meta name="twitter:image" content="http://www.iosweekend.com/images/logo-stacked-512x257.jpg" />
+
+        <!---------------------------->
+
+        <link href="webfonts/ss-social.css" rel="stylesheet" />
+
+        <!-- Le styles -->
+        <link href="/assets/css/bootstrap.css" rel="stylesheet">
+        <style type="text/css">
+          body {
+            padding-top: 5px;
+            padding-bottom: 10px;
+          }
+
+          /* Custom container */
+          .container {
+            margin: 0 auto;
+            max-width: 1000px;
+          }
+
+
+           html { 
+                background-image: url('/images/background.png');
+                background-repeat: repeat; 
+           }
+
+            .body {
+                background-color: transparent; 
+            }
+
+          .container > hr {
+            margin: 30px 0;
+          }
+
+          /* Main marketing message and sign up button */
+          .jumbotron {
+            margin: 0px 0;
+            text-align: center;
+          }
+          .jumbotron h1 {
+            font-size: 50px; /* 100px; */
+            line-height: 1;
+          }
+          .jumbotron .lead {
+            font-size: 24px;
+            line-height: 1.25;
+          }
+          .jumbotron .smaller {
+            font-size: 18px;
+            line-height: 1.0;
+          }
+          .jumbotron .btn {
+            font-size: 21px;
+            padding: 14px 24px;
+          }
+
+          /* Supporting marketing content */
+          .marketing {
+            margin: 60px 0;
+          }
+          .marketing p + h4 {
+            margin-top: 28px;
+          }
+
+
+          /* Customize the navbar links to be fill the entire space of the .navbar */
+          .navbar .navbar-inner {
+            padding: 0;
+          }
+          .navbar .nav {
+            margin: 0;
+            display: table;
+            width: 100%;
+          }
+          .navbar .nav li {
+            display: table-cell;
+            width: 1%;
+            float: none;
+          }
+          .navbar .nav li a {
+            font-weight: bold;
+            text-align: center;
+            border-left: 1px solid rgba(255,255,255,.75);
+            border-right: 1px solid rgba(0,0,0,.1);
+          }
+          .navbar .nav li:first-child a {
+            border-left: 0;
+            border-radius: 3px 0 0 3px;
+          }
+          .navbar .nav li:last-child a {
+            border-right: 0;
+            border-radius: 0 3px 3px 0;
+          }
+
+
+            .ios-icon-idea {
+                width:64px;
+                height:64px;
+                text-decoration:none;
+                display:inline-block;
+                background-image:url(/images/icon-idea-64x64.png);
+                background-position: 0 0;
+                align: center;
+            }
+
+            .center {
+                text-align: center;
+                display: block;    
+            }
+
+            div.polaroid
+            {
+                width:294px;
+                padding:10px 10px 20px 10px;
+                border:1px solid #BFBFBF;
+                background-color:white;
+                /* Add box-shadow */
+                box-shadow:2px 2px 3px #aaaaaa;
+            }
+
+            div.rotate_left
+            {
+                float:left;
+                -ms-transform:rotate(7deg); /* IE 9 */
+                -webkit-transform:rotate(7deg); /* Safari and Chrome */
+                transform:rotate(7deg);
+            }
+
+            div.rotate_right
+            {
+                float:left;
+                -ms-transform:rotate(-8deg); /* IE 9 */
+                -webkit-transform:rotate(-8deg); /* Safari and Chrome */
+                transform:rotate(-8deg);
+            }
+
+        
+        </style>
+        <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="/assets/js/html5shiv.js"></script>
+        <![endif]-->
+
+        <!-- Fav and touch icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="/assets/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="/assets/ico/favicon.png">
+    </head>
+    <body>
+
+        <div class="container">
+
+            <div class="row-fluid" style="padding-top: 15px;">
+                <div class="span3"></div>
+                <div class="span6"><img src="/images/logo-stacked-450x225.png" /></div>
+                <div class="span3"></div>
+            </div>
+            <div class="jumbotron" style="padding-top: 15px;">
+                <p class="lead">Expert Instructors &bullet; Weekend Courses &bullet; Hands-on Labs!</p>
+                <p class="lead">Space is Limited, Register Today!</p>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span6">
+                    <hr/>
+                    <h2 class="text-center">Beginning iOS Programming</h2>
+                    <p>Create your first iOS application in a weekend. Attend <i>Beginning iOS Programming</i> and learn to use Xcode, how to program using the Objective-C programming language, and find out what it takes to turn an idea into a running mobile application.</p>
+                    <p>You will build <i>Count'em Up</i>, a full-featured iPhone application used to tally numbers, work towards a goal and time events.</p>
+                    <p class="text-center"><a class="btn btn-small btn-info" href="/courses/beginning-ios-programming.html">Course Information</a></p>
+                    <hr/>
+                </div>
+                <div class="span6">
+                    <hr/>
+                    <h2 class="text-center">iOS Network Programming</h2>
+                    <p>Building mobile applications is all about timely access to relavent information. Attend <i>iOS Network Programming</i> and learn how to build networked mobile applications capable of accessing data in the cloud via REST web services.</p>
+                    <p>You will build a full REST web service client to interact with the <i>Count'em Up Server</i>.</p>
+                    <p class="text-center"><a class="btn-center btn btn-small btn-info" href="/courses/ios-network-programming.html">Course Information</a></p>
+                    <hr/>
+                </div>
+            </div>
+
+            <div class="row-fluid"   style="padding-top: 20px;">
+                <div class="span4">
+                    <div class="photo polaroid rotate_right" style="margin-top: 70px;">
+                        <a href="#">
+                            <img src="/images/learn-by-doing-2-384x288.jpg" />
+                        </a>
+                    </div>
+                </div>
+                <div class="span1"></div>
+                <div class="span7">
+                    <div class="jumbotron">
+                        <h2>Learn by Doing</h2>
+                    </div>
+                    <p>iOS Weekend is a series of weekend courses focused on helping you develop practical skills building mobile applications that run on modern iOS devices (iPhone, iPod Touch, iPad). Our philosophy is that developers learn best by doing so we design each course as a series of hands-on exercises all focused on aspects of building a real-world mobile application.<p/>
+                    <p>In a sea of “me too” iOS training courses what sets iOS Weekend apart is our approach to learning. Each weekend workshop is a guided exercise in building a complete iOS application. We take you through all the steps required to make sure that when you leave the class at the end of the weekend you have a working application running on your iPhone or iPad.</p>
+                    <p>Training classes are offered in the San Francisco Bay Area.  Future classes are planned for the greater San Diego Area and Portland, OR.  Hope to see you at the next iOS Weekend. Remember, to grow as a software developer you need to Invest in your future one weekend at a time!</p>
+                </div>
+            </div>
+
+            <div class="row-fluid" style="padding-top: 20px;">
+                <div class="span8">
+                    <div class="jumbotron">
+                        <h2>Meet the Instructor</h2>
+                    </div>
+                    <p>The instructor for all iOS Weekend courses is Bennett Smith. He has been working with Apple technologies since the late 1970's, developing games and utilities in 6502 assembly language on an Apple ][+ computer. He has been teaching courses on various software development topics for almost as long.  He now works as Founder and CEO of FocalShift, LLC.  He is a software architect, OS X and iOS developer, experienced agile developer and serial startup junkie who loves hiking and mountain biking.</p>
+                    <p>Learn more about Bennett on his <a href="http://blog.focalshift.com">blog</a> or contact him directly using one of the links below.</p>
+                    <p>
+                    <p><i class="ss-icon">email</i> <a href="mailto:bennett@iosweekend.com">Mail</a>&nbsp;&nbsp;&nbsp;&nbsp;<i class="ss-icon">twitter</i> <a href="http://twitter.com/bennettsmith">Twitter</a>&nbsp;&nbsp;&nbsp;&nbsp;<i class="ss-icon">githuboctocat</i> <a href="http://github.com/bennettsmith">GitHub</a>&nbsp;&nbsp;&nbsp;&nbsp;<i class="ss-icon">linkedin</i> <a href="http://www.linkedin.com/in/idevelopsoftware">LinkedIn</a></p>
+                </div>
+                <div class="span4">
+                    <div class="photo polaroid rotate_left" style="margin-top: 70px;">
+                        <a href="http://gravatar.com/41fc7271a0c4f40e3e580519facce00c">
+                            <img src="http://www.gravatar.com/avatar/41fc7271a0c4f40e3e580519facce00c.jpg?size=256" />
+                        </a>
+                    </div>
+                </div>
+          </div>
+
+       <hr>
+
+        <div class="row-fluid footer">
+            <div class="span4">
+                <p>&copy; <a href="http://www.focalshift.com">FocalShift, LLC</a> 2013</p>
+            </div>
+            <div class="span8">
+                <p class="pull-right">
+                    <a href="/press.html">Press Kit</a> &bullet; <a href="http://blog.focalshift.com">Blog</a>
+                </p>
+            </div>
+        </div> 
+
+        <!-- /container -->
+
+
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-38569173-2']);
+            _gaq.push(['_setDomainName', 'iosweekend.com']);
+            _gaq.push(['_setAllowLinker', true]);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+             var ga = document.createElement('script'); 
+             ga.type = 'text/javascript'; 
+             ga.async = true; 
+             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; 
+             var s = document.getElementsByTagName('script')[0]; 
+             s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script src="/assets/js/bootstrap.js"></script>
+
+    </body>
+</html>
